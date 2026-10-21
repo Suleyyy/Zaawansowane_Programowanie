@@ -1,5 +1,7 @@
 on:
   push:
+    branches:
+      - '**'
 
 jobs:
   pep8-check:
