@@ -1,8 +1,9 @@
-def find(l: list, n:int) -> bool:
+def find(l: list, n: int) -> bool:
     return n in l
 
-res = find(range(0,6), 7)
+
+res = find(range(0, 6), 7)
 if res:
     print("Jest")
-else: 
+else:
     print("Nie ma")

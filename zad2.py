@@ -1,5 +1,6 @@
 def sum(i: int, y: int) -> int:
-    return i+y
+    return i + y
 
-suma = sum(1,2)
+
+suma = sum(1, 2)
 print(suma)
