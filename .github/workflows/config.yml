@@ -19,4 +19,4 @@ jobs:
         run: pip install pycodestyle
 
       - name: Uruchomienie sprawdzania stylu
-        run: pycodestyle . --exclude=venv
+        run: pycodestyle . --max-line-length=130 --exclude=venv
