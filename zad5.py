@@ -1,5 +1,5 @@
-def find(l: list, n: int) -> bool:
-    return n in l
+def find(lista: list, n: int) -> bool:
+    return n in lista
 
 
 res = find(range(0, 6), 7)
