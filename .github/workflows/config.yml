@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  pep8-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout kodu
+        uses: actions/checkout@v4
+
+      - name: Konfiguracja Pythona
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      - name: Instalacja pycodestyle
+        run: pip install pycodestyle
+
+      - name: Uruchomienie sprawdzania stylu
+        run: pycodestyle . --max-line-length=100 --exclude=venv
