@@ -7,18 +7,18 @@ obj = MyFunctions()
 class TestmyTests:
 
     def test_is_palindrome(self) -> bool:
-        assert obj.is_palindrome("kajak") == True
-        assert obj.is_palindrome("Kobyła ma mały bok") == True
-        assert obj.is_palindrome("python") == False
-        assert obj.is_palindrome("") == True
-        assert obj.is_palindrome("A") == True
+        assert obj.is_palindrome("kajak") is True
+        assert obj.is_palindrome("Kobyła ma mały bok") is True
+        assert obj.is_palindrome("python") is False
+        assert obj.is_palindrome("") is True
+        assert obj.is_palindrome("A") is True
 
     def test_fibonacci(self):
         assert obj.fibonacci(0) == 0
         assert obj.fibonacci(1) == 1
         assert obj.fibonacci(5) == 5
         assert obj.fibonacci(10) == 55
-        assert obj.fibonacci(-1) == None
+        assert obj.fibonacci(-1) is None
 
     def test_count_vowels(self):
         assert obj.count_vowels("Python") == 2
