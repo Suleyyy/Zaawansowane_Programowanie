@@ -1,4 +1,4 @@
-from main import MyFunctions
+from classes import MyFunctions
 import pytest
 
 obj = MyFunctions()
@@ -34,3 +34,38 @@ class TestmyTests:
         with pytest.raises(ValueError):
             obj.calculate_discount(100, -0.1)
             obj.calculate_discount(100, 1.5)
+
+    def test_flatten_list(self):
+        assert obj.flatten_list([[1, 2, 3]]) == [1, 2, 3]
+        assert obj.flatten_list([[1], [2, 3], [4, [5]]]) == [1, 2, 3, 4, 5]
+        assert obj.flatten_list([]) == []
+        assert obj.flatten_list([[[1]]]) == [1]
+        assert obj.flatten_list([1, [2, [3, [4]]]]) == [1, 2, 3, 4]
+
+    def test_word_frequencies(self):
+        assert obj.word_frequencies("To be or not to be") == {
+            "to": 2,
+            "be": 2,
+            "or": 1,
+            "not": 1,
+        }
+        assert obj.word_frequencies("Hello, hello!") == {"hello": 2}
+        assert obj.word_frequencies("") == {}
+        assert obj.word_frequencies("Python Python python") == {"python": 3}
+        assert obj.word_frequencies("Ala ma kota, a kot ma Ale") == {
+            "ala": 1,
+            "ma": 2,
+            "kota": 1,
+            "a": 1,
+            "kot": 1,
+            "ale": 1,
+        }
+
+    def test_is_prime(self):
+        assert obj.is_prime(2) is True
+        assert obj.is_prime(3) is True
+        assert obj.is_prime(4) is False
+        assert obj.is_prime(0) is False
+        assert obj.is_prime(1) is False
+        assert obj.is_prime(5) is True
+        assert obj.is_prime(97) is True
