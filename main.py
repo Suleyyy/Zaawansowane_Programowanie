@@ -13,20 +13,20 @@ class MyFunctions:
         elif n == 1:
             return 1
         else:
-            return self.fibonacci(n-1) + self.fibonacci(n-2)
+            return self.fibonacci(n - 1) + self.fibonacci(n - 2)
 
     def count_vowels(self, text: str) -> int:
-        vowels = ['a','e', 'i', 'o', 'u', 'y', 'ó']
+        vowels = ["a", "e", "i", "o", "u", "y", "ó"]
         count = 0
         for i in text.lower():
             if i in vowels:
-                count +=1
+                count += 1
         return count
 
     def calculate_discount(self, price: float, discount: float) -> float:
         if discount > 1 or discount < 0:
             raise ValueError()
-        return price - price*discount
+        return price - price * discount
 
     def flatten_list(self, nested_list: list) -> list:
         return [x for sub in nested_list for x in sub]
@@ -44,10 +44,7 @@ class MyFunctions:
         count = 0
         for i in range(1, n):
             if n % i == 0:
-                count +=1
+                count += 1
             if count > 2:
                 return False
         return True
-
-
-

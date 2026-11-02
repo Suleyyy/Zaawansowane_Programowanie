@@ -3,8 +3,8 @@ import pytest
 
 obj = MyFunctions()
 
-class TestmyTests:
 
+class TestmyTests:
 
     def test_is_palindrome(self) -> bool:
         assert obj.is_palindrome("kajak") == True
