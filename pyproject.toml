@@ -7,7 +7,9 @@ authors = [
     { email = "mikolajsulkowski675@gmail.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "fastapi[standard]>=0.165.0",
+]
 
 [project.scripts]
 zaawansowane-programowanie = "zaawansowane_programowanie:main"

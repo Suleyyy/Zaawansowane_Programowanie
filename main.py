@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from movie import Movie, Links, Ratings, Tags
+from myClasses.film import Movie, Links, Ratings, Tags
 import csv
 
 app = FastAPI()
